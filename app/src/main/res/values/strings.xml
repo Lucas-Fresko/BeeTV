@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BeeTV</string>
+    <string name="login">Zaloguj</string>
+    <string name="register">Zarejestruj</string>
+    <string name="username">Nazwa Użytkownika</string>
+    <string name="password">Hasło</string>
+    <string name="e_mail">E-mail</string>
+    <string name="confirm_email">Potwierdź E-mail</string>
+    <string name="mi_o_ciebie_pozna">Miło Ciebie poznać!</string>
+    <string name="user_does_not_exist">Nie ma takiego użytkownika.</string>
+    <string name="username_required">Wymagana nazwa użytkownika.</string>
+    <string name="username_length_requirement_error">Nazwa musi miec pomiędzy 6 a 20 znaków.</string>
+    <string name="password_required">Wymagane hasło.</string>
+    <string name="password_length_error">Hasło musi miec przynajmniej 6 znaków.</string>
+    <string name="email_required">Wymagany e-mail.</string>
+    <string name="email_invalid">Niepoprawny e-mail.</string>
+    <string name="confrim_email">Potwierdź e-mail.</string>
+    <string name="email_confirmation_failed">Adresy e-mail muszą byc takie same.</string>
+    <string name="wyloguj">Wyloguj</string>
+    <string name="last_log_in">Poprzednie logowanie: </string>
+    <string name="go_back">Wróć</string>
+    <string name="required_field">Pole wymagane.</string>
+    <string name="forgot_your_password">Zapomniałeś hasła?</string>
+    <string name="confirm">Potwierdź</string>
+    <string name="provide_email">Podaj E-mail.</string>
+</resources>
