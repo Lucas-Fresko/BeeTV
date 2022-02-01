@@ -27,6 +27,7 @@ class PasswordRecoveryFragment: DialogFragment() {
             //var supportFragmentManager: FragmentManager = getSupportFragmentManager()
 
             //Dialog.show(supportFragmentManager, "PasswordRecoveryAnimation")
+            //this is a change to test BeeTV github setup
         }
 
         return rootView
