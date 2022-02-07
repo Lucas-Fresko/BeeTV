@@ -2,12 +2,16 @@ package com.example.BeeTV
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import database.User
@@ -52,9 +56,54 @@ class PasswordRecoveryFragment: DialogFragment() {
             Log.d("log", "Logging user= $loggingUser")
             if(loggingUser!=null){
                 Log.d("log","Found user for password recovery")
+                var inputLayout = rootView.findViewById<LinearLayout>(R.id.inputLayout)
+                var animationLayout = rootView.findViewById<LinearLayout>(R.id.animationLayout)
+                inputLayout.visibility = if (inputLayout.visibility == View.VISIBLE){
+                    View.INVISIBLE
+                } else{
+                    View.VISIBLE
+                }
+                animationLayout.visibility = if (animationLayout.visibility == View.VISIBLE){
+                    View.INVISIBLE
+                } else{
+                    View.VISIBLE
+                }
+                val animationText = rootView.findViewById<TextView>(R.id.animationText)
+                Handler(Looper.getMainLooper()).postDelayed(
+                    {
+                        animationText.text="Sending password recovery e-mail..."
+
+
+                        Handler(Looper.getMainLooper()).postDelayed(
+                            {
+                                animationText.text="Recovering your e-mail password..."
+
+                                Handler(Looper.getMainLooper()).postDelayed(
+                                    {
+                                        animationText.text="What do you mean my password can't be the same as the last one?"
+
+                                        Handler(Looper.getMainLooper()).postDelayed(
+                                            {
+                                                animationText.text="Trying again..."
+                                            },
+                                            2000
+                                        )
+
+                                    },
+                                    2000
+                                )
+
+                            },
+                            2000
+                        )
+
+                    },
+                    2000
+                )
+
             } else {
                 Log.d("log","No user for password recovery")
-                emailField.error=getString(R.string.required_field)
+                emailField.error=getString(R.string.user_does_not_exist)
             }
         }
 
